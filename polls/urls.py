@@ -2,6 +2,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    # added the word 'specifics'
+    url(r'^specifics/(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
     # eg: /polls/
     url(r'^$', views.index, name='index'),
     # eg: /polls/5/
